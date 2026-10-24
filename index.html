@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Look Cinema</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="title">Look Cinema</h1>
+    <div class="lang-switch">
+      <button data-lang="fr" class="active">FR</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="kab">ⵜⴰⵇⴱⴰⵊⵍⵉⵊⵜ</button>
+    </div>
+  </header>
+  <main>
+    <section class="controls">
+      <label id="upload-label">Charger une image</label>
+      <input type="file" id="file-input" accept="image/*">
+      <label id="look-label">Look cinématique</label>
+      <select id="look-select">
+        <option value="none">Aucun</option>
+        <option value="teal-orange">Teal & Orange</option>
+        <option value="noir">Noir</option>
+        <option value="vintage">Vintage chaud</option>
+        <option value="scifi">Sci-Fi froid</option>
+        <option value="pastel">Pastel</option>
+        <option value="bleach">Bleach Bypass</option>
+      </select>
+      <label id="strength-label">Intensité</label>
+      <input type="range" id="strength" min="0" max="100" value="70">
+      <button id="apply-btn">Appliquer</button>
+      <button id="export-btn" disabled>Exporter PNG</button>
+    </section>
+    <section class="preview">
+      <canvas id="canvas"></canvas>
+      <p id="status">Chargez une image pour commencer.</p>
+    </section>
+  </main>
+  <footer>
+    <p id="footer-text">Outil gratuit open source — rien n'est envoyé. Licence MIT.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
